@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Listing {
+  id          String   @id @default(uuid())
+  title       String
+  price       Int
+  description String @default("")
+  images      Image[]
+  createdAt   DateTime @default(now())
+}
+
+model Image {
+  id         String  @id @default(uuid())
+  key        String
+  url        String
+  position   Int     @default(0)
+  listing    Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  listingId  String
+}
