@@ -1,2 +1,2 @@
 # colinbuilds
-storefront website for colinbuildz custom gaming pc business
+storefront website for colinbuilds custom gaming pc business
