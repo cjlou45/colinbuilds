@@ -1,0 +1,11 @@
+/*
+  Warnings:
+
+  - Added the required column `key` to the `Image` table without a default value. This is not possible if the table is not empty.
+
+*/
+-- AlterTable
+ALTER TABLE "Image" ADD COLUMN     "key" TEXT NOT NULL;
+
+-- AlterTable
+ALTER TABLE "Listing" ALTER COLUMN "description" SET DEFAULT '';

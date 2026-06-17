@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -13,7 +14,8 @@
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@prisma/config": "^7.8.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "prisma": "^7.8.0",

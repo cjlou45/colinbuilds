@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "../generated/prisma"
+  output = "../node_modules/@prisma/client"
 }
 
 datasource db {
@@ -20,7 +20,7 @@ model Image {
   id         String  @id @default(uuid())
   key        String
   url        String
-  position   Int     @default(0)
+  position   Int     @default(0) 
   listing    Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
   listingId  String
 }
