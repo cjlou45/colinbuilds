@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import { promises as fs } from 'fs'; // 1. Correct promise-based fs import
 import path from 'path';
+import { S3Client } from '@aws-sdk/client-s3';
 
 const app = express();
 app.use(express.json());

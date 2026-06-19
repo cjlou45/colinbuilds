@@ -28,3 +28,4 @@ export async function updateListing(id, data) {
 export async function deleteListing(id) {
   return prisma.listing.delete({ where: { id } });
 }
+ 
